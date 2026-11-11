@@ -9,7 +9,7 @@ import docx
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# ================= 0. 企业级日志配置 =================
+# ================= 0. 日志配置 =================
 logging.basicConfig(
     filename='agent.log',
     level=logging.INFO,
@@ -17,8 +17,8 @@ logging.basicConfig(
 )
 
 # ================= 1. 页面配置 =================
-st.set_page_config(page_title="企业级智能招聘中枢", page_icon="🧠", layout="wide")
-st.title("🧠 企业级智能招聘中枢 (Pro 版)")
+st.set_page_config(page_title="智能招聘中枢", page_icon="🧠", layout="wide")
+st.title("🧠 智能招聘中枢 (Pro 版)")
 st.caption("支持并发解析 · 日志追踪 · 多轮对话 RAG · 高可用重试")
 
 PROVIDERS = {
