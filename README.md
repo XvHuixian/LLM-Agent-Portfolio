@@ -22,7 +22,7 @@
 3. 启动应用：`streamlit run resume_agent.py`
 
 
-## 🛍️ 电商 AI 智能客服 Agent
+# 🛍️ 电商 AI 智能客服 Agent
 
 基于大语言模型（LLM）工具调用（Function Calling）与本地检索增强（RAG）技术的电商客服意图分流与业务处理系统。
 
