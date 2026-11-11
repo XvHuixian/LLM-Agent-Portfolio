@@ -1,6 +1,6 @@
 # 智能招聘中枢 (AI Resume Agent)
 
-基于大语言模型（LLM）与向量检索（RAG）技术，从零手写的简历批量解析与智能初筛系统。
+基于大语言模型（LLM）与向量检索（RAG）技术的简历批量解析与智能初筛系统。
 
 ## ✨ 核心功能
 - 多格式文件流式解析：支持 TXT、PDF、DOCX 格式，利用多线程并发解析，极速构建简历文本库。
@@ -19,4 +19,27 @@
 ## 🚀 如何运行
 1. 克隆本项目：`git clone https://github.com/XvHuixian/LLM-Agent-Portfolio.git`
 2. 安装依赖：`pip install streamlit openai pypdf python-docx scikit-learn`
-3. 启动应用：`streamlit run my_agent.py`
+3. 启动应用：`streamlit run resume_agent.py`
+
+
+## 🛍️ 电商 AI 智能客服 Agent
+
+基于大语言模型（LLM）工具调用（Function Calling）与本地检索增强（RAG）技术的电商客服意图分流与业务处理系统。
+
+## ✨ 核心功能
+- 高并发意图分流：结合本地知识库与业务模拟接口，自动精准判断用户意图（售前政策咨询 / 售后订单物流查询）。
+- 工具调用完整闭环：精准处理 `tool_calls` 与 `tool` 消息的上下文配对，彻底解决多轮对话中的 400 断链错误。
+- 思考模型兼容：完美适配 DeepSeek 等支持思考模式的模型，自动提取并回传 `reasoning_content`，保障复杂推理场景下的长对话稳定性。
+- 业务接口无感对接：使用 Python 函数 Mock（模拟）了真实的订单查询（Order API）和物流追踪（Logistics API）逻辑，方便后续无缝替换为真实微服务接口。
+- 兜底容错机制：基于 TF-IDF 计算用户提问与知识库的相似度，低于阈值时自动转接人工客服，有效避免大模型“幻觉”问题。
+
+## 🛠️ 技术栈
+- 前端框架：Streamlit
+- 大模型交互：OpenAI SDK (兼容所有国内主流大模型)
+- 检索算法：scikit-learn (TF-IDF + Cosine Similarity)
+- 工具调用：Function Calling / 上下文状态机维护
+
+## 🚀 如何运行
+1. 克隆本项目：`git clone https://github.com/XvHuixian/LLM-Agent-Portfolio.git`
+2. 安装依赖：`pip install streamlit openai scikit-learn`
+3. 启动应用：`streamlit run ecommerce_agent.py`
