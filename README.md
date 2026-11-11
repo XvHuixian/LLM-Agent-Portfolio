@@ -17,6 +17,6 @@
 - 并发处理：concurrent.futures
 
 ## 🚀 如何运行
-1. 克隆本项目：`git clone https://github.com/XvHuixian/Resume-Agent.git`
+1. 克隆本项目：`git clone https://github.com/XvHuixian/LLM-Agent-Portfolio.git`
 2. 安装依赖：`pip install streamlit openai pypdf python-docx scikit-learn`
 3. 启动应用：`streamlit run my_agent.py`
